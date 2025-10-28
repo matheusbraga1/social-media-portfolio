@@ -1,3 +1,13 @@
+// Menu hamburger
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+// Smooth scroll para links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -7,10 +17,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         behavior: "smooth",
         block: "start",
       });
+      // Fecha o menu mobile após clicar
+      navLinks.classList.remove("active");
+      hamburger.classList.remove("active");
     }
   });
 });
 
+// Header transparente ao rolar
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 20) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
+// Animações ao scroll
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
@@ -25,11 +50,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document
-  .querySelectorAll(".service-card, .portfolio-item, .stat-item")
-  .forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(20px)";
-    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-    observer.observe(el);
-  });
+document.querySelectorAll(".service-card, .portfolio-item").forEach((el) => {
+  el.style.opacity = "0";
+  el.style.transform = "translateY(20px)";
+  el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+  observer.observe(el);
+});
