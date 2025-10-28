@@ -1,169 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brenda Almeida - Social Media especialista em transformar marcas em experiências digitais memoráveis através de estratégias criativas e gestão profissional de redes sociais em Campo Grande, MS">
+    <meta name="keywords" content="social media, gestão de redes sociais, marketing digital, design gráfico, Campo Grande MS, estratégia digital">
+    <meta name="author" content="Brenda Almeida">
+    <meta name="theme-color" content="#ffd700">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Brenda Almeida - Social Media | Campo Grande MS">
+    <meta property="og:description" content="Transformando marcas em experiências digitais memoráveis através de conteúdo estratégico">
+    <meta property="og:image" content="img/be-logo-maior.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brenda Almeida - Social Media">
+    <meta name="twitter:description" content="Transformando marcas em experiências digitais memoráveis">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/be-logo-maior.png">
-    <title>Brenda de Almeida</title>
+    <link rel="apple-touch-icon" href="img/be-logo-maior.png">
+    
+    <title>Brenda Almeida - Social Media Profissional | Campo Grande MS</title>
 </head>
 <body>
-    <header id="header">
-        <nav>
+    <!-- Header / Navigation -->
+    <header id="header" role="banner">
+        <nav role="navigation" aria-label="Navegação principal">
             <div class="logo-container">
-                <img src="img/logo-be.png" alt="logo-be" class="logo-icon">
+                <a href="#home" aria-label="Ir para o início">
+                    <img src="img/logo-be.png" alt="Logotipo Brenda Almeida" class="logo-icon" width="210" height="210">
+                </a>
             </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Trabalhos</a></li>
-                <li><a href="#contato">Contato</a></li>
+            
+            <button class="hamburger" 
+                    id="hamburger" 
+                    aria-label="Abrir menu de navegação"
+                    aria-expanded="false"
+                    aria-controls="navLinks">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+            
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#home" role="menuitem">Início</a></li>
+                <li role="none"><a href="#servicos" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="#portfolio" role="menuitem">Trabalhos</a></li>
+                <li role="none"><a href="#contato" role="menuitem">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="profile-section">
-                <img src="img/pic-be-1.jpg" alt="Brenda Almeida" class="profile-image">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <div class="profile-section">
+                    <img src="img/pic-be-1.jpg" 
+                         alt="Foto de Brenda Almeida, profissional de Social Media" 
+                         class="profile-image"
+                         width="180"
+                         height="180"
+                         loading="eager">
+                    
+                    <h1 id="hero-title">Brenda Almeida</h1>
+                    <p class="subtitle">Social Media</p>
+                </div>
+                <p class="hero-description">
+                    Transformando marcas em experiências digitais memoráveis através de conteúdo estratégico
+                </p>
+                <a href="#contato" class="cta-button" aria-label="Entre em contato">
+                    Vamos Conversar
+                </a>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="clients" aria-labelledby="clients-title">
+            <h2 id="clients-title">Empresas que Confiam</h2>
+            <p class="clients-subtitle">Marcas que transformei em experiências digitais de sucesso</p>
+            <div class="clients-grid" role="list">
+                <div class="client-logo-wrapper" role="listitem">
+                    <img src="img/donzito-removebg-preview.png" 
+                         alt="Logotipo Donzito" 
+                         class="client-logo"
+                         width="200"
+                         height="120"
+                         loading="lazy">
+                </div>
+                <div class="client-logo-wrapper" role="listitem">
+                    <img src="img/download__4_-removebg-preview.png" 
+                         alt="Logotipo Café Mostarda" 
+                         class="client-logo"
+                         width="200"
+                         height="120"
+                         loading="lazy">
+                </div>
+                <div class="client-logo-wrapper" role="listitem">
+                    <img src="img/zitao-removebg-preview.png" 
+                         alt="Logotipo Zitão Churrascaria" 
+                         class="client-logo"
+                         width="200"
+                         height="120"
+                         loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="services" aria-labelledby="services-title">
+            <h2 class="section-title" id="services-title">Serviços</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <svg class="service-icon" 
+                         viewBox="0 0 24 24" 
+                         fill="none" 
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         role="img">
+                        <title>Ícone de Gestão de Redes</title>
+                        <path d="M17 2H7C4.79086 2 3 3.79086 3 6V18C3 20.2091 4.79086 22 7 22H17C19.2091 22 21 20.2091 21 18V6C21 3.79086 19.2091 2 17 2Z" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 2V22" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 6H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 10H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 14H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 18H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Gestão de Redes</h3>
+                    <p>Planejamento e gerenciamento completo das suas redes sociais com estratégia personalizada</p>
+                </article>
                 
-                <h1>Brenda Almeida</h1>
-                <p class="subtitle">Social Media</p>
+                <article class="service-card">
+                    <svg class="service-icon" 
+                         viewBox="0 0 24 24" 
+                         fill="none" 
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         role="img">
+                        <title>Ícone de Design Gráfico</title>
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Design Gráfico</h3>
+                    <p>Criação de identidade visual e posts criativos para engajamento máximo</p>
+                </article>
+                
+                <article class="service-card">
+                    <svg class="service-icon" 
+                         viewBox="0 0 24 24" 
+                         fill="none" 
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         role="img">
+                        <title>Ícone de Estratégia Digital</title>
+                        <circle cx="12" cy="12" r="10" stroke="#FFA500" stroke-width="2"/>
+                        <path d="M12 6V12L16 14" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h3>Estratégia Digital</h3>
+                    <p>Planejamento estratégico focado em alcançar seus objetivos de negócio</p>
+                </article>
             </div>
-            <p>Transformando marcas em experiências digitais memoráveis através de conteúdo estratégico</p>
-            <a href="#contato" class="cta-button">Vamos Conversar</a>
-        </div>
-    </section>
+        </section>
 
-    <section class="clients">
-        <h2>Empresas que Confiam no Meu Trabalho</h2>
-        <div class="clients-grid">
-            <img src="img/donzito-removebg-preview.png" alt="Donzito" class="client-logo">
-            <img src="img/download__4_-removebg-preview.png" alt="Café Mostarda" class="client-logo">
-            <img src="img/zitao-removebg-preview.png" alt="Zitão Churrascaria" class="client-logo">
-        </div>
-    </section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" aria-labelledby="portfolio-title">
+            <h2 class="section-title" id="portfolio-title">Trabalhos</h2>
+            <div class="portfolio-grid">
+                <article class="portfolio-item">
+                    <div class="portfolio-image-container">
+                        <img src="img/pic-carne-sal.jpg" 
+                             alt="Fotografia de prato gastronômico da Zitão Churrascaria" 
+                             class="portfolio-image"
+                             width="400"
+                             height="300"
+                             loading="lazy">
+                        <div class="portfolio-overlay" aria-hidden="true">
+                            <p class="portfolio-overlay-text">
+                                Criação de conteúdo visual gastronômico, gestão de redes sociais e estratégia de engajamento focada em experiências culinárias autênticas.
+                            </p>
+                        </div>
+                    </div>       
+                    <div class="portfolio-info">
+                        <h3>Zitão Churrascaria</h3>
+                        <p>Meu papel foi transformar o calor da churrasqueira em presença digital de alto impacto.</p>
+                    </div>         
+                </article>
 
-    <section id="servicos" class="services">
-        <h2 class="section-title">Serviços</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 2H7C4.79086 2 3 3.79086 3 6V18C3 20.2091 4.79086 22 7 22H17C19.2091 22 21 20.2091 21 18V6C21 3.79086 19.2091 2 17 2Z" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7 2V22" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 6H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 10H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 14H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 18H16" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <h3>Gestão de Redes</h3>
-                <p>Planejamento e gerenciamento completo das suas redes sociais com estratégia personalizada</p>
+                <article class="portfolio-item">
+                    <div class="portfolio-image-container">
+                        <img src="img/be-tirando-foto.jpg" 
+                             alt="Brenda Almeida fotografando conteúdo profissional" 
+                             class="portfolio-image"
+                             width="400"
+                             height="300"
+                             loading="lazy">
+                        <div class="portfolio-overlay" aria-hidden="true">
+                            <p class="portfolio-overlay-text">
+                                Produção profissional de fotos e vídeos, com estética consistente, narrativa envolvente e calls-to-action estratégicos para máxima conversão.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Fotografia & Produção de Vídeos</h3>
+                        <p>Especialista em Stories que retêm e convertem. Também fotografo e produzo vídeos com estética consistente, ritmo certo e CTA claro para mover o público à ação.</p>
+                    </div>
+                </article>
+
+                <article class="portfolio-item">
+                    <div class="portfolio-image-container">
+                        <img src="img/pic-drink-1.jpg" 
+                             alt="Fotografia de drinks do BarZito" 
+                             class="portfolio-image"
+                             width="400"
+                             height="300"
+                             loading="lazy">
+                        <div class="portfolio-overlay" aria-hidden="true">
+                            <p class="portfolio-overlay-text">
+                                Gestão completa de redes sociais, planejamento de conteúdo estratégico, análise de métricas e otimização contínua para crescimento orgânico sustentável.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>BarZito</h3>
+                        <p>No Barzito, meu trabalho foi dar ritmo e consistência à presença digital. Transformar a rotina do bar em histórias que param o scroll e manter uma operação que publica, mede e evolui semana após semana.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Vamos Trabalhar Juntos?</h2>
+            <p>Entre em contato e vamos transformar sua presença digital</p>
+            
+            <div class="contact-info" role="list">
+                <div class="contact-item" role="listitem">
+                    <svg viewBox="0 0 24 24" 
+                         fill="none" 
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         role="img">
+                        <title>Ícone de Email</title>
+                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 6L12 13L2 6" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="mailto:brendaoliveira760@icloud.com" aria-label="Enviar email para brendaoliveira760@icloud.com">
+                        brendaoliveira760@icloud.com
+                    </a>
+                </div>
+                
+                <div class="contact-item" role="listitem">
+                    <svg viewBox="0 0 24 24" 
+                         fill="none" 
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         role="img">
+                        <title>Ícone de Telefone</title>
+                        <path d="M22 16.92V19.92C22 20.92 21.1 21.72 20.1 21.72C10.6 20.92 3.08 13.4 2.28 3.9C2.28 2.9 3.08 2 4.08 2H7.08C7.58 2 8.03 2.39 8.1 2.89C8.23 3.88 8.47 4.85 8.82 5.78C8.96 6.14 8.85 6.55 8.57 6.82L6.84 8.55C8.39 11.71 11.29 14.61 14.45 16.16L16.18 14.43C16.45 14.15 16.86 14.04 17.22 14.18C18.15 14.53 19.12 14.77 20.11 14.9C20.61 14.97 21 15.42 21 15.92Z" stroke="#fda085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="tel:+5532988608497" aria-label="Ligar para (32) 98860-8497">
+                        (32) 98860-8497
+                    </a>
+                </div>
+                
+                <div class="contact-item" role="listitem">
+                    <svg viewBox="0 0 24 24" 
+                         fill="none" 
+                         xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true"
+                         role="img">
+                        <title>Ícone de Localização</title>
+                        <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#fda085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#fda085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Campo Grande, MS</span>
+                </div>
             </div>
             
-            <div class="service-card">
-                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <h3>Design Gráfico</h3>
-                <p>Criação de identidade visual e posts criativos para engajamento máximo</p>
+            <div class="contact-cta">
+                <a href="mailto:brendaoliveira760@icloud.com" 
+                   class="cta-button"
+                   aria-label="Enviar mensagem por email">
+                    Enviar Mensagem
+                </a>
             </div>
-            
-            <div class="service-card">
-                <svg class="service-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" stroke="#FFA500" stroke-width="2"/>
-                    <path d="M12 6V12L16 14" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <h3>Estratégia Digital</h3>
-                <p>Planejamento estratégico focado em alcançar seus objetivos de negócio</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="portfolio">
-        <h2 class="section-title">Trabalhos</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="portfolio-image-container">
-                    <img src="img/pic-carne-sal.jpg" alt="pic-carne" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <p class="portfolio-overlay-text">Criação de conteúdo visual gastronômico, gestão de redes sociais e estratégia de engajamento focada em experiências culinárias autênticas.</p>
-                    </div>
-                </div>       
-                <div class="portfolio-info">
-                    <h3>Zitão Churrascaria</h3>
-                    <p>Meu papel foi transformar o calor da churrasqueira em presença digital de alto impacto.</p>
-                </div>         
-            </div>
-
-            <div class="portfolio-item">
-                <div class="portfolio-image-container">
-                    <img src="img/be-tirando-foto.jpg" alt="pic-fotografia" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <p class="portfolio-overlay-text">Produção profissional de fotos e vídeos, com estética consistente, narrativa envolvente e calls-to-action estratégicos para máxima conversão.</p>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>Fotografia & Produção de Vídeos</h3>
-                    <p>Especialista em Stories que retêm e convertem. Também fotografo e produzo vídeos com estética consistente, ritmo certo e CTA claro para mover o público à ação.</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item">
-                <div class="portfolio-image-container">
-                    <img src="img/pic-drink-1.jpg" alt="pic-drink" class="portfolio-image">
-                    <div class="portfolio-overlay">
-                        <p class="portfolio-overlay-text">Gestão completa de redes sociais, planejamento de conteúdo estratégico, análise de métricas e otimização contínua para crescimento orgânico sustentável.</p>
-                    </div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>BarZito</h3>
-                    <p>No Barzito, meu trabalho foi dar ritmo e consistência à presença digital. Transformar a rotina do bar em histórias que param o scroll e manter uma operação que publica, mede e evolui semana após semana.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="contact">
-        <h2>Vamos Trabalhar Juntos?</h2>
-        <p>Entre em contato e vamos transformar sua presença digital</p>
-        <div class="contact-info">
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22 6L12 13L2 6" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>brendaoliveira760@icloud.com</span>
-            </div>
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22 16.92V19.92C22 20.92 21.1 21.72 20.1 21.72C10.6 20.92 3.08 13.4 2.28 3.9C2.28 2.9 3.08 2 4.08 2H7.08C7.58 2 8.03 2.39 8.1 2.89C8.23 3.88 8.47 4.85 8.82 5.78C8.96 6.14 8.85 6.55 8.57 6.82L6.84 8.55C8.39 11.71 11.29 14.61 14.45 16.16L16.18 14.43C16.45 14.15 16.86 14.04 17.22 14.18C18.15 14.53 19.12 14.77 20.11 14.9C20.61 14.97 21 15.42 21 15.92Z" stroke="#fda085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>(32) 98860-8497</span>
-            </div>
-            <div class="contact-item">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#fda085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#fda085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Campo Grande, MS</span>
-            </div>
-        </div>
-        <div style="margin-top: 2rem;">
-            <a href="mailto:brendaoliveira760@icloud.com" class="cta-button">Enviar Mensagem</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Brenda Almeida. Todos os direitos reservados.</p>
-        <p>By Matheus Braga ❤️</p>
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; <span id="current-year">2025</span> Brenda Almeida. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="#" class="footer-link">Matheus Braga</a> 😉</p>
     </footer>
+
     <script src="index.js"></script>
 </body>
 </html>
