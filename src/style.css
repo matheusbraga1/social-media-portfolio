@@ -213,8 +213,8 @@ header.scrolled .hamburger span {
 }
 
 .profile-image {
-  width: clamp(120px, 25vw, 180px);
-  height: clamp(120px, 25vw, 180px);
+  width: clamp(120px, 25vw, 280px);
+  height: clamp(120px, 25vw, 280px);
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid transparent;
