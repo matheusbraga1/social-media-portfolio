@@ -13,7 +13,7 @@ hamburger.addEventListener("click", function () {
   hamburger.setAttribute("aria-label", isExpanded ? "Abrir menu de navegação" : "Fechar menu de navegação");
 });
 
-// Smooth scroll para links
+// Smooth scroll for links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -56,7 +56,7 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-// Header transparente ao rolar
+// Header solid color when user scroll's
 const header = document.getElementById("header");
 
 window.addEventListener("scroll", function () {
@@ -67,7 +67,6 @@ window.addEventListener("scroll", function () {
   }
 }, { passive: true });
 
-// Animações ao scroll com Intersection Observer
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
@@ -78,13 +77,11 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
       entry.target.style.transform = "translateY(0)";
-      // Remove observer após animar para melhor performance
       observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
-// Observa elementos para animação
 document.querySelectorAll(".service-card, .portfolio-item, .client-logo-wrapper").forEach((el) => {
   el.style.opacity = "0";
   el.style.transform = "translateY(20px)";
@@ -92,27 +89,22 @@ document.querySelectorAll(".service-card, .portfolio-item, .client-logo-wrapper"
   observer.observe(el);
 });
 
-// Lazy loading otimizado para imagens
 if ("loading" in HTMLImageElement.prototype) {
-  // Navegador suporta lazy loading nativo
   const images = document.querySelectorAll('img[loading="lazy"]');
   images.forEach(img => {
     img.src = img.src;
   });
 } else {
-  // Fallback para navegadores antigos
   const script = document.createElement("script");
   script.src = "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js";
   document.body.appendChild(script);
 }
 
-// Atualiza ano do footer automaticamente
 const currentYearElement = document.getElementById("current-year");
 if (currentYearElement) {
   currentYearElement.textContent = new Date().getFullYear();
 }
 
-// Preload das fontes críticas para melhor performance
 if ("fonts" in document) {
   Promise.all([
     document.fonts.load("600 1em -apple-system"),
@@ -122,36 +114,15 @@ if ("fonts" in document) {
   });
 }
 
-// Melhora performance do scroll com debounce
 let scrollTimeout;
 window.addEventListener("scroll", function() {
   if (scrollTimeout) {
     window.cancelAnimationFrame(scrollTimeout);
   }
-  
-  scrollTimeout = window.requestAnimationFrame(function() {
-    // Lógica adicional de scroll pode ser adicionada aqui
-  });
 }, { passive: true });
 
-// Detecta preferência de modo escuro do sistema (preparado para futuro)
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 prefersDarkScheme.addEventListener("change", (e) => {
-  // Futuro: implementar tema escuro
   console.log("User prefers", e.matches ? "dark" : "light", "mode");
 });
-
-// Log para analytics (exemplo - substituir por sua solução de analytics)
-console.log("Portfolio Brenda Almeida - Loaded successfully");
-
-// Service Worker para PWA (opcional - descomentar se quiser implementar)
-/*
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js")
-      .then(registration => console.log("SW registered:", registration))
-      .catch(error => console.log("SW registration failed:", error));
-  });
-}
-*/
