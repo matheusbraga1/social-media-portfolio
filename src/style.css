@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primary-gold: #ffd700;
-  --primary-orange: #ffa500;
+  --primary-gold: #ffe922;
+  --primary-orange: #ffc355;
   --text-dark: #2c2c2c;
   --text-medium: #555;
   --text-light: #666;
@@ -52,7 +52,7 @@ header {
 }
 
 header.scrolled {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255, 255, 255, 0.48);
   backdrop-filter: blur(15px);
   box-shadow: var(--shadow-sm);
 }
@@ -336,23 +336,25 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  position: relative;
 }
 
 .client-logo {
-  width: 100%;
-  max-width: 180px;
-  height: clamp(80px, 12vw, 100px);
+  width: 70%;
+  height: auto;
+  max-height: clamp(70px, 10vw, 90px);
   object-fit: contain;
   filter: grayscale(100%) brightness(0.4) contrast(0.8);
   opacity: 0.6;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: block;
 }
 
-.client-logo-wrapper:hover .client-logo {
+.client-logo:hover {
   filter: grayscale(0%) brightness(1) contrast(1);
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* ==================== SERVICES SECTION ==================== */
